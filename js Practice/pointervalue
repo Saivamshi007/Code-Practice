@@ -1,0 +1,15 @@
+pointer=(arr)=>{
+    let length=arr.length;
+    let start=0;
+    let last=arr.length-1;
+    while(last>start){
+        if(arr[start]+arr[last]<0){
+            start++
+        }else if(arr[start]+arr[last]>0){
+            last--;
+        }else{
+            return [arr[start],arr[last]]
+        }
+    }
+
+}

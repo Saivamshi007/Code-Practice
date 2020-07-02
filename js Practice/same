@@ -1,0 +1,20 @@
+same=(arr1,arr2)=>{
+
+    if(arr1.length==arr1.length){
+        for(var i=0;i<arr1.length;i++){
+           let currentindex=arr2.indexOf(arr1[i]**2);
+
+           if(currentindex==-1){
+               return "not same"
+           }
+
+           arr2.splice(currentindex,1);
+
+        }
+
+        return "same";
+
+    }else{
+        return "not same";
+            }
+}

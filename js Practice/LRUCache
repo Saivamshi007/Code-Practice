@@ -1,0 +1,32 @@
+var LRUCache=function(capacity){
+    this.capacity=capacity;
+     this.map = new Map();
+
+};
+
+LRUCache.prototype.get=function(key){
+    if(map.has(key))return -1;
+    var v=map.get(key);
+    map.delete(key);
+    map.set(key);
+    return v;
+};
+
+
+LRUCache.prototype.put=function(key,value){
+    console.log(map.size)
+    if(map.size<this.capacity)
+    {
+
+        map.set(key,value);
+    }else{
+    map.delete(map.keys().next().value)
+    map.set(key,value)
+    }
+};
+
+
+LRUCache(3);
+
+
+

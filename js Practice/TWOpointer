@@ -1,0 +1,13 @@
+two=(arr)=>{
+
+    var i=0
+    for(var j=1;j<arr.length;j++){
+        if(arr[i]!==arr[j]){
+            i++;
+
+        }
+    }
+
+    return i+1;
+
+}
