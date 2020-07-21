@@ -2,7 +2,7 @@ public class SelectionSort {
     public static void main(final String[] args) {
         final int[] arr = { 5, 2, 9, 20, 1, 3 };
 
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < arr.length; i++) {,
             int min = i;
             for (int j = i + 1; j < arr.length; j++) {
                 if (arr[j] < arr[min]) {
