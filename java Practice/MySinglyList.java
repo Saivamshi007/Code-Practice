@@ -15,7 +15,8 @@ public class MySinglyList {
             list.insert(s2);
             list.insert(s3);
             list.insert(s4);
-            list.insert(3, s5);
+
+            list.remove(2);
 
             // list.unshift(6);
             // list.shift();

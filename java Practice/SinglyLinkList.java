@@ -10,8 +10,6 @@ public class SinglyLinkList {
         list.addToFront(stu1);
         list.addToFront(stu2);
 
-        list.unshift(6);
-
         list.printlist();
 
     }

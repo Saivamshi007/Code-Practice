@@ -1,6 +1,7 @@
 public class MYLinkedList {
 
     static Node head;
+    Node tail;
 
     void insert(Student data) {
         Node node = new Node();
@@ -9,14 +10,18 @@ public class MYLinkedList {
         if (head == null) {
 
             head = node;
+            tail = node;
 
         } else {
-            Node n = head;
-            while (n.next != null) {
-                n = n.next;
 
-            }
-            n.next = node;
+            tail.next = node;
+            tail = node;
+
+            // while (n.next != null) {
+            // n = n.next;
+
+            // }
+            // n.next = node;
         }
 
     }
@@ -40,6 +45,18 @@ public class MYLinkedList {
 
     }
 
+    void remove(int index) {
+
+        Node before = get(index - 1);
+
+        Node current = before.next;
+        Node after = get(index + 1);
+
+        before.next = after;
+        current.next = null;
+
+    }
+
     public void unshift(Student data) {
 
         Node temp = head;
@@ -56,19 +73,19 @@ public class MYLinkedList {
 
     }
 
-    // public int get(int index) {
+    public Node get(int index) {
 
-    // Node current = head;
-    // int count = 0;
-    // while (count != index) {
-    // current = current.next;
-    // count++;
+        Node current = head;
+        int count = 0;
+        while (count != index) {
+            current = current.next;
+            count++;
 
-    // }
+        }
 
-    // return current.data;
+        return current;
 
-    // }
+    }
 
     public void insert(int index, Student data) {
         Node current = head;

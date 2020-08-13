@@ -8,17 +8,22 @@ public class SinglyLinkList {
         list.insert(5);
         list.insert(10);
 
-        list.printNode(list.reverse());
+        list.show();
+
+        // list.printNode(list.reverse());
 
     }
 
     static class Node {
         int data;
         Node next;
+
     }
 
     static class Link {
         Node head;
+        Node tail;
+        int length = 0;
 
         public void insert(final int data) {
             final Node newNode = new Node();
@@ -26,15 +31,20 @@ public class SinglyLinkList {
 
             if (head == null) {
                 head = newNode;
+                tail = newNode;
             } else {
-                Node current = head;
 
-                while (current.next != null) {
-                    current = current.next;
+                tail.next = newNode;
+                tail = newNode;
 
-                }
-                current.next = newNode;
+                // while (current.next != null) {
+                // current = current.next;
+
+                // }
+                // current.next = newNode;
             }
+
+            length++;
 
         }
 
