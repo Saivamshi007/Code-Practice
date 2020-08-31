@@ -1,4 +1,3 @@
-
 public class SinglyLinkList {
     public static void main(final String[] args) {
 
