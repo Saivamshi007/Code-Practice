@@ -1,5 +1,6 @@
 import java.io.File;
 import java.util.Arrays;
+import java.util.*;
 
 class TestArea {
     public static void main(String[] args) {
@@ -23,11 +24,44 @@ class TestArea {
         // }
         // }
 
-        int a = 0, b = 0;
+        // Scanner s = new Scanner(System.in);
 
-        System.out.println(--a);
-        System.out.println(b--);
+        // int n = s.nextInt();
 
+        // int result = fact(n, 1);
+
+        // System.out.println(result);
+
+        String s = "sunny";
+
+        for (int i = 0; i < 4; i++) {
+
+            System.out.println(s.substring(1));
+
+        }
+
+    }
+
+    public static int printNum(int n) {
+
+        if (n == 0) {
+            return 0;
+
+        }
+
+        System.out.println(n);
+
+        return printNum(n - 1);
+
+    }
+
+    public static int fact(int n, int res) {
+
+        if (n == 0 || n == 1) {
+            return res;
+        }
+
+        return fact(n - 1, res * n);
     }
 
     public static boolean prime(int i, int a) {
